@@ -1,0 +1,1 @@
+C:/Users/tiago/OneDrive/Documents/bloco de notas/caderno 11/texto1.txt
