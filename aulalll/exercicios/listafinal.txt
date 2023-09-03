@@ -1,0 +1,2 @@
+tiago;b-c-a;0;
+lucas;a-b-c;3;
