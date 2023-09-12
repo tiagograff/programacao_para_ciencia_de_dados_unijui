@@ -22,3 +22,5 @@ dados = [
 
 with open('novo.json', 'w') as arquivo:
     json.dump(dados, arquivo)
+
+arquivo.close()
