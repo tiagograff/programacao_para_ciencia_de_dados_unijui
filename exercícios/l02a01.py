@@ -46,17 +46,17 @@ listaRespotas = []
 ok = True
 
 #limpar arquivos
-clean('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/gabarito.txt')
-clean('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/respostas.txt')
-clean('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/listafinal.txt')
+clean('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/gabarito.txt')
+clean('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/respostas.txt')
+clean('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/listafinal.txt')
 
 numQuestoes = int(input('quantas questões vai ter? '))
 
 #enquanto o número de questões for diferente do tamanho do gabarito
 while numQuestoes != len(listaGabarito):
 
-    gabarito = insiraValoresEmUmDocumento('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/gabarito.txt')
-    listaGabarito = transformaEmLista(open('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/gabarito.txt','r'),gabarito)
+    gabarito = insiraValoresEmUmDocumento('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/gabarito.txt')
+    listaGabarito = transformaEmLista(open('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/gabarito.txt','r'),gabarito)
 
     if numQuestoes != len(listaGabarito):
         print('o numero de questões {} difere de {}'.format(
@@ -67,13 +67,13 @@ while ok:
     #nome
     nome = (input('nome do aluno: '))
     #resposta
-    resposta = insiraValoresEmUmDocumento('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/respostas.txt')
+    resposta = insiraValoresEmUmDocumento('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/respostas.txt')
     #transformando resposta em lista
-    listaRespostas = transformaEmLista(open('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/respostas.txt','r'),resposta)
+    listaRespostas = transformaEmLista(open('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/respostas.txt','r'),resposta)
     #numero de acertos
     numDeAcertos = comparaGabarito(listaGabarito, listaRespostas)
     #arquivo final formatado
-    arquivoFinal('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/listafinal.txt',listaRespostas,nome,numDeAcertos)
+    arquivoFinal('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/listafinal.txt',listaRespostas,nome,numDeAcertos)
     #continuar looping sim ou não
     continuar = input('deseja continuar? ')
     if ('não' == continuar):
@@ -83,5 +83,5 @@ while ok:
     else:
         print('valor inválido')
 
-arq = open('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/listafinal.txt', 'r')
+arq = open('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/listafinal.txt', 'r')
 print(arq.read())

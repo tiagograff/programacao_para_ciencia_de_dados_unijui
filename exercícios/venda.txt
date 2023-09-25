@@ -1,0 +1,3 @@
+produto 1: código: 123, nome: x e valor: 50
+produto 2: código: 321, nome: y e valor: 200
+valor total = 250

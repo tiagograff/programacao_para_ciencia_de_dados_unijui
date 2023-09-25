@@ -34,8 +34,8 @@ aux = 1
 valores = []
 
 #limpar arquivos
-clean('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/produto.txt')
-clean('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/venda.txt')
+clean('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/produto.txt')
+clean('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/venda.txt')
 
 #primeiro enquanto for verdadeiro
 while ok:
@@ -48,10 +48,10 @@ while ok:
     valorProduto = valorProdutoStr
     produto = [codigoProduto, nomeProduto, valorProduto]
     #inserir valores em um documento txt
-    inserirProduto('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/produto.txt',produto)
+    inserirProduto('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/produto.txt',produto)
     produtos.append(produto)
     #inserir produtos uma lista de venda
-    inserirProdutoEmLista('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/venda.txt',produto,aux)
+    inserirProdutoEmLista('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/venda.txt',produto,aux)
     adcionar = input('deseja adcionar outro produto a lista de produtos? ou deseja sair? ')
     if adcionar == 'sim':
         aux +=1
@@ -80,6 +80,6 @@ for val in venda:
 somaTotal = sum(valores)
 
 #formatar arquivo final com as informacoes finais
-arquivoFinal = valorTotal('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/venda.txt',somaTotal)
-arquivoFinal = open('faculdade/programacao_para_ciencia_de_dados_unijui/aulalll/exercicios/venda.txt','r')
+arquivoFinal = valorTotal('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/venda.txt',somaTotal)
+arquivoFinal = open('faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/venda.txt','r')
 print(arquivoFinal.read())
