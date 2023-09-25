@@ -119,7 +119,7 @@ lista = [
 
 # abrindo arquivo
 arquivo = open(
-    'faculdade/programacao_para_ciencia_de_dados_unijui/aula05/exercicio/novo.csv', 'w')
+    'faculdade/programacao_para_ciencia_de_dados_unijui/exercícios/novo.csv', 'w')
 # salvando arquivo em uma variável
 w = csv.writer(arquivo)
 # escrever a lista por linha
