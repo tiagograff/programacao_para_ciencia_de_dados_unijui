@@ -1,5 +1,6 @@
 import mysql.connector  # driver conector
 
+
 def getConexao():
     con = mysql.connector.connect(
         host='localhost',
@@ -8,3 +9,6 @@ def getConexao():
         database='estoque'
     )
     return con  # retorna uma conexão com o banco de dados
+
+
+print(getConexao)
