@@ -1,6 +1,10 @@
 import pandas as pd
 import csv as csv
 import json
+#percorre cada caractere de string verificando se é um digito ou se é '.', dpois o join juntará em uma string vazia
+def verificaValidade(string):
+    string = ''.join(char for char in string if char.isdigit() or char == '.')
+    return string
 
 #pandas lendo o doc exel
 doc_read = pd.read_excel(
@@ -27,7 +31,7 @@ with open(doc_csv, 'r', encoding='utf-8') as csv_file:
         cod_uf = int(linha['COD. UF'])
         cod_municipio = int(linha['COD. MUNIC'])
         nome_municipio = linha['NOME DO MUNICÍPIO']
-        pop = int(linha['POPULAÇÃO'])
+        pop = verificaValidade(linha['POPULAÇÃO'])
         #verifica se já tem a entrada do estado
         verifica_existencia = next((item for item in dados if item['uf']==uf),None)
         #se sim
@@ -53,4 +57,4 @@ with open(doc_csv, 'r', encoding='utf-8') as csv_file:
 
 #salvando os dados em JSON
 with open('faculdade/programacao_para_ciencia_de_dados_unijui/ei3/pop.json', 'w',encoding='utf-8') as jsonfile:
-    json.dump(dados, jsonfile, indent=4)
+    json.dump(dados, jsonfile, ensure_ascii=False, indent=4)
